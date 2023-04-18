@@ -1,25 +1,27 @@
 #include<stdio.h>
-int numero,i,primo=1;
-printf ("ingrese un numero positivo\n");
-scanf("%d",&numero);
-
-for ( i = 1; i <=numero, i++)
-{
+int primo (int numero){
+int i, cont=0;
+if (numero<2){
+    return 0;
+}
+for (i=2,i<num, i++){
     if(numero%i==0){
         cont=cont+1;
-        break;
-    }
-    if(primo=1){
-        printf("%d es numero primo", numero);
-
+        return 0;
     }
     
-    else{
-         print("%d no es numero primo", numero);
-
-    }
-   
-    return 0;
-
 }
-
+return 1;
+}
+int main (){
+    int numero;
+    printf ("digite un numero:\n ");
+    scanf("%d",&numero);
+    if(primo(numero)){
+        printf("%d es primo\n ", numero);
+    }
+    else {
+        printf("%d no es primo\n", numero);
+    }
+    return 0;
+}
