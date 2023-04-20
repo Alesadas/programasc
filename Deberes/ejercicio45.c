@@ -1,4 +1,9 @@
+//Leer un numero y calcularle el factorial a todos los enteros comprendidos entre 1 y el numero leido
+#include<stdio.h>
+#include<locale.h>
+
 int main() {
+   setlocale(LC_ALL,"");
    int num, i, j;
    int factorial;
    

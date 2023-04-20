@@ -1,5 +1,9 @@
+//Leer un nuemro y calcular su factorial
 #include <stdio.h>
+#include<locale.h>
+
 int main() {
+    setlocale(LC_ALL,"");
     int i,numero,f;
     i=1;
     f=1;

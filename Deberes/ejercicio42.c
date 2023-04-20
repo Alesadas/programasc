@@ -1,30 +1,22 @@
 //Determinar a cuanto es igual el promedio entero de los elementos de la serie de Fibonacci entre 0 y 1000
+//Determinar a cuanto es igual el promedio entero de los elementos de la serie de Fibonacci entre 0 y 1000
 #include<stdio.h>
 #include<math.h>
-int main(){
-    int numero,i,a,b,c,suma,promedio;
-    a=0;
-    b=1;
-    printf("ingrese el valor para calcular la serie de Fibonacci:\n");
-    scanf("%d",&numero);
-    if (numero>=0&&numero<=1000){
-        for ( i = 1; i <= numero; i++){
-            c=a+b;
-            a=b;
-            b=c;
-            printf("%d,",a);
-        }
-        while (i<=numero){
-            suma=suma+i;
-            printf("%d",suma);
-        }
-        while (i<=numero){
-            promedio=trunc(suma/numero);
-            printf("%d",promedio);
+int main() {
+    int num1 = 0, num2 = 1, temp, promedio;
+    int contador = 0;
+
+    while (num2 <= 1000){
+        temp = num2;
+        num2 = num1 + num2;
+        promedio =trunc(num2/temp);
+        num1 = temp;
+
+        if (num2 >= 0&& num2 <= 1000){
+            contador++;
         }
     }
-    else{
-        printf("ingrese valores positivos hasta 1000.\n");
-    }
+
+    printf("el promedio entero de la serie de fibonacci entre 0 y 1000 es:\n%d",contador);
     return 0;
 }
