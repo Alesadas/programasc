@@ -6,5 +6,10 @@ int main(){
     scanf("%d",&filas);
     printf("digite el numero de columnas:\n");
     scanf("%d",&columnas);
+    for(int i=0;i<filas;i++){
+        for(int j=0; j<columnas;j++){
+            
+        }
+    }
 
 }
