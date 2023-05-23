@@ -24,5 +24,5 @@ void calcularTranspuesta(int **matriz, int **transpuesta, int filas, int columna
             transpuesta[j][i] = matriz[i][j];
         }
     }
-}
+} 
 
