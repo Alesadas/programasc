@@ -41,7 +41,7 @@ int main() {
         matriz[i] = (int *)malloc(columnas * sizeof(int));
     }
 
-    // Llenar la matriz con números aleatorios entre 0 y 100
+    // Se llena  la matriz con números aleatorios entre 0 y 100
     srand(time(NULL));
     for (int i = 0; i < filas; i++) {
         for (int j = 0; j < columnas; j++) {
@@ -61,11 +61,11 @@ int main() {
     // Calcular la matriz transpuesta
     calcularTranspuesta(matriz, transpuesta, filas, columnas);
 
-    // Imprimir la matriz transpuesta
+    //  SE Imprimir la matriz transpuesta
     printf("\nMatriz transpuesta:\n");
     imprimirMatriz(transpuesta, columnas, filas);
 
-    // Liberar la memoria utilizada por las matrices
+    //fors anidados para calcular la matriz y la transpuesta
     for (int i = 0; i < filas; i++) {
         free(matriz[i]);
     }
