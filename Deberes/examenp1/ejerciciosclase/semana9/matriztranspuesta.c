@@ -48,3 +48,33 @@ int main() {
             matriz[i][j] = generarAleatorio(0, 100);
         }
     }
+    // Imprimir la matriz original
+    printf("Matriz original:\n");
+    imprimirMatriz(matriz, filas, columnas);
+
+    // Crear la matriz transpuesta
+    int **transpuesta = (int **)malloc(columnas * sizeof(int *));
+    for (int i = 0; i < columnas; i++) {
+        transpuesta[i] = (int *)malloc(filas * sizeof(int));
+    }
+
+    // Calcular la matriz transpuesta
+    calcularTranspuesta(matriz, transpuesta, filas, columnas);
+
+    // Imprimir la matriz transpuesta
+    printf("\nMatriz transpuesta:\n");
+    imprimirMatriz(transpuesta, columnas, filas);
+
+    // Liberar la memoria utilizada por las matrices
+    for (int i = 0; i < filas; i++) {
+        free(matriz[i]);
+    }
+    free(matriz);
+
+    for (int i = 0; i < columnas; i++) {
+        free(transpuesta[i]);
+    }
+    free(transpuesta);
+
+    return 0;
+}
