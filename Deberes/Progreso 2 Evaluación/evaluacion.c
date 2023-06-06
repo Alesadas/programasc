@@ -37,4 +37,38 @@ int main() {
 
     return 0;
 }
+// Función para calcular el promedio de calificaciones de un alumno
+float calcularPromedioAlumno(float calificaciones[]) {
+    int i;
+    float suma = 0.0;
+    for (i = 0; i < 3; i++) {
+        suma += calificaciones[i];
+    }
+    return suma / 3;
+}
+
+// Función para calcular el promedio del grupo para un progreso dado
+float calcularPromedioGrupo(float calificaciones[][3]) {
+    int i;
+    float suma = 0.0;
+    for (i = 0; i < 23; i++) {
+        suma += calificaciones[i][j];
+    }
+    return suma / 23;
+}
+
+// Función para obtener el alumno con el mayor promedio
+int obtenerMejorAlumno(float calificaciones[][3]) {
+    int i;
+    int mejorAlumno = 0;
+    float mejorPromedio = calcularPromedioAlumno(calificaciones[0]);
+    for (i = 1; i < 23; i++) {
+        float promedio = calcularPromedioAlumno(calificaciones[i]);
+        if (promedio > mejorPromedio) {
+            mejorPromedio = promedio;
+            mejorAlumno = i;
+        }
+    }
+    return mejorAlumno;
+}
 
